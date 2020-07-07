@@ -54,9 +54,8 @@ class Godfather(commands.Bot):
         if isinstance(error, commands.CommandNotFound):
             if not isinstance(ctx.channel, discord.DMChannel):
                 return
-            command, * \
-                args = remove_prefix(ctx.message.content,
-                                     ctx.prefix).split(' ')
+            args = remove_prefix(ctx.message.content, ctx.prefix).split(' ')
+            command = args[0]
             games = [
                 *filter(lambda g: g.has_player(ctx.author), self.games.values())]
             if len(games) == 0:
@@ -67,12 +66,10 @@ class Godfather(commands.Bot):
             if not alive_or_recent_jester(player, pl_game) \
                     or not hasattr(player.role, 'action'):
                 return
-            if command.lower() not in [player.role.action, 'noaction']:
+            valid_actions = player.role.action if isinstance(player.role.action, list) \
+                else [player.role.action]
+            if command.lower() not in (valid_actions + ['noaction']):
                 return
-            if command.lower() == 'noaction':
-                args = ['noaction']
-            if hasattr(player.role, 'on_pm_command_notarget'):
-                return await player.role.on_pm_command_notarget(ctx, pl_game, player, command)
             await player.role.on_pm_command(ctx, pl_game, player, args)
 
             return  # ignore invalid commands
