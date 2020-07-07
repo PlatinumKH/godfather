@@ -3,7 +3,7 @@ import requests
 
 
 def get_random_sequence(low: int, high: int):
-    """Generate (pseudo-)random number sequence of all numbers in 
+    """Generate (pseudo-)random number sequence of all numbers in
     a closed interval. Uses random.org, falls back to standard
     random.sample() if an error occurs.
     Arguments:

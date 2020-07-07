@@ -1,0 +1,7 @@
+ss3: 3. (town, vanilla, 1), (mafia, goon, 1), (town, super_saint, 1)
+vettest: 4. (town, veteran, 1), (town, cop, 1), (mafia, godfather, 1), (town, escort, 1)
+fake5: 5. (town, vanilla, 1), (town, doctor, 1), (town, cop, 1), (town, lookout, 1), (mafia, goon, 1)
+dethy: 5. (town, cop, 1), (town, insane_cop, 1), (town, naive_cop, 1), (town, paranoid_cop, 1), (mafia, goon, 1)
+dethysucks: 5. (town, vanilla, 3), (town, doctor, 1), (mafia, goon, 1)
+notreallymatrix6: 9. (town, vanilla, 4), (town, escort, 1), (town, cop, 1), (neutral.jester, jester, 1), (mafia, goon, 1), (mafia, consort, 1)
+matrix7maybe?: 10. (town, vanilla, 2), (town, lookout, 1), (town, bodyguard, 1), (town, vigilante, 1), (town, escort, 1), (town, cop, 1), (mafia, godfather, 1), (mafia, goon, 1), (mafia, consigliere, 1)
